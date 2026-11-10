@@ -69,4 +69,14 @@ public int numberOfAccesses()
     }
     return total;
 }
+public int busiestHour()
+{
+    int busiest = 0;
+    for(int hour = 1; hour < hourCounts.length; hour++) {
+        if(hourCounts[hour] > hourCounts[busiest]) {   // Q8
+            busiest = hour;
+        }
+    }
+    return busiest;
+}
 }
