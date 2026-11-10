@@ -79,4 +79,14 @@ public int busiestHour()
     }
     return busiest;
 }
+public int quiestHour()
+{
+    int quiest = 0;
+    for(int hour =1; hour < hourCounts.length; hour++){
+        if(hourCounts[hour] > hourCounts[quiest]) {
+            quiest = hour;
+        }
+    }
+    return quiest;
+}
 }
