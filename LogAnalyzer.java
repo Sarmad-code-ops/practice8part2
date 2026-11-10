@@ -89,4 +89,20 @@ public int quiestHour()
     }
     return quiest;
 }
+/**
+ * Return the first hour of the busiest two-hour period.
+ */
+public int busiestTwoHour()
+{
+    int bestStart = 0;
+    int bestSum = hourCounts[0] + hourCounts[1];
+    for(int hour = 1; hour < hourCounts.length - 1; hour++) {
+        int sum = hourCounts[hour] + hourCounts[hour + 1];   // Q11
+        if(sum > bestSum) {
+            bestSum = sum;
+            bestStart = hour;
+        }
+    }
+    return bestStart;
+}
 }
